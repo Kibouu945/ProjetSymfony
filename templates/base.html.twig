@@ -45,17 +45,18 @@
                     </button>
                     <div class="collapse navbar-collapse" id="navbarCollapse">
                         <div class="navbar-nav ms-auto py-0">
-                            <a href="index.html" class="nav-item nav-link active">Accueil</a>
-                            <a href="service.html" class="nav-item nav-link">Nos Services</a>
-                            <a href="package.html" class="nav-item nav-link">Réservation</a>
+                            <a href="{{ path ('index') }}" class="nav-item nav-link active">Accueil</a>
+                            <a href="{{ path ('service') }}" class="nav-item nav-link">Nos Services</a>
+                            <a href="{{ path ('about') }}" class="nav-item nav-link">A Propos</a>
+                            <a href="{{ path ('reservation') }}" class="nav-item nav-link">Réservation</a>
                             <div class="nav-item dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Salons</a>
                                 <div class="dropdown-menu m-0">
-                                    <a href="destination.html" class="dropdown-item">Salons Privés</a>
-                                    <a href="booking.html" class="dropdown-item">Salons Simples</a>
+                                    <a href="" class="dropdown-item">Salons Privés</a>
+                                    <a href="" class="dropdown-item">Salons Simples</a>
                                 </div>
                             </div>
-                            <a href="contact.html" class="nav-item nav-link">Contact</a>
+                            <a href="{{ path ('contact') }}" class="nav-item nav-link">Contact</a>
                         </div>
                         <a href="" class="btn btn-primary rounded-pill py-2 px-4">Inscription</a>
                     </div>
@@ -65,12 +66,8 @@
                     <div class="container py-5">
                         <div class="row justify-content-center py-5">
                             <div class="col-lg-10 pt-lg-5 mt-lg-5 text-center">
-                                <h1 class="display-3 text-white mb-3 animated slideInDown">Enjoy Your Vacation With Us</h1>
+                                <h1 class="display-3 text-white mb-3 animated slideInDown">Profitez de vos réunions dans le plus grand calme  </h1>
                                 <p class="fs-4 text-white mb-4 animated slideInDown">Tempor erat elitr rebum at clita diam amet diam et eos erat ipsum lorem sit</p>
-                                <div class="position-relative w-75 mx-auto animated slideInDown">
-                                    <input class="form-control border-0 rounded-pill w-100 py-3 ps-4 pe-5" type="text" placeholder="Eg: Thailand">
-                                    <button type="button" class="btn btn-primary rounded-pill py-2 px-4 position-absolute top-0 end-0 me-2" style="margin-top: 7px;">Search</button>
-                                </div>
                             </div>
                         </div>
                     </div>
