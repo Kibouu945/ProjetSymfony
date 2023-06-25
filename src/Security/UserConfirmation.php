@@ -26,7 +26,7 @@ class UserConfirmation implements UserCheckerInterface
             return;
         }
 
-        if ($user->isIsVerified()) {
+        if (!$user->isIsVerified()) {
             throw new CustomUserMessageAccountStatusException('Votre compte n\'est encore pas vérifié, Merci de le confirmer avant le ' . $user->getTokenRegistrationLifetime()->format('d/m/Y à H:i:s') . ' en cliquant sur le lien dans l\'email de confirmation que vous avez reçu.');
         }
     }
