@@ -1,6 +1,6 @@
 /********** Template CSS **********/
 :root {
-    --primary: #86B817;
+    --primary: #6E594E;
     --secondary: #FE8800;
     --light: #F5F5F5;
     --dark: #14141F;
@@ -43,6 +43,7 @@
     font-family: 'Nunito', sans-serif;
     font-weight: 600;
     transition: .5s;
+    color: var(--primary); /* Nouvelle couleur pour les boutons */
 }
 
 .btn.btn-primary,
@@ -268,7 +269,7 @@
 
 /*** Booking ***/
 .booking {
-    background: linear-gradient(rgba(15, 23, 43, .7), rgba(15, 23, 43, .7)), url(../img/booking.jpg);
+    background: linear-gradient(rgba(15, 23, 43, .7), rgba(15, 23, 43, .7)), url(../img/salon_prive_4_places.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -400,7 +401,7 @@
     margin-bottom: 5px;
     padding: 0;
     text-align: left;
-    color: #FFFFFF;
+    color: var(--primary);
     font-size: 15px;
     font-weight: normal;
     text-transform: capitalize;
@@ -441,3 +442,4 @@
     padding-right: 0;
     border-right: none;
 }
+

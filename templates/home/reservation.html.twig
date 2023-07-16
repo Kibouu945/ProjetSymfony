@@ -8,15 +8,15 @@
         <div class="booking p-5">
             <div class="row g-5 align-items-center">
                 <div class="col-md-6 text-white">
-                    <h6 class="text-white text-uppercase">Booking</h6>
-                    <h1 class="text-white mb-4">Online Booking</h1>
-                    <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
-                    <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
+                    <h6 class="text-white text-uppercase">Réservez dès maintenant votre espace de travail collaboratif au concept innovant de Gusto Coffee</h6>
+                    <h1 class="text-white mb-4">RESERVATION</h1>
+                    <p class="mb-4">Réservez dès maintenant votre espace de travail collaboratif au concept innovant de Gusto Coffee. </p>
+                    <p class="mb-4">Profitez d'un environnement stimulant, alliant café de qualité et espaces de travail modernes, pour booster votre productivité. Ne manquez pas cette occasion unique de vivre l'expérience Gusto Coffee !</p>
                 
                 </div>
                 <div class="col-md-6">
                     <h1 class="text-white mb-4">Réserver votre salle</h1>
-                    <form>
+                    <form action =" {{ path ('reservation') }}">
                         <div class="row g-3">
                             <div class="col-md-6">
                                 <div class="form-floating">
@@ -39,10 +39,10 @@
                             <div class="col-md-6">
                                 <div class="form-floating">
                                     <select class="form-select" id="salon-type">
-                                        <option value="private">Private Salon</option>
-                                        <option value="simple">Simple Salon</option>
+                                        <option value="private">Salons Privés</option>
+                                        <option value="simple">Salon Principal </option>
                                     </select>
-                                    <label for="salon-type">Salon Type</label>
+                                    <label for="salon-type">Type de Salon</label>
                                 </div>
                             </div>
                             <div class="col-md-6">
@@ -55,7 +55,7 @@
                                 <div class="form-floating">
                                     <select class="form-select" id="package-type">
                                         <option value="barista">Barista Package</option>
-                                        <option value="simple">Simple Package</option>
+                                        <option value="simple">Découverte Package</option>
                                     </select>
                                     <label for="package-type">Package Type</label>
                                 </div>
