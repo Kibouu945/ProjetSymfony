@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use App\Repository\ReservationRepository;
+use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: ReservationRepository::class)]
@@ -13,52 +14,82 @@ class Reservation
     #[ORM\Column]
     private ?int $id = null;
 
+    #[ORM\Column(length: 255)]
+    private ?string $type_salle = null;
+
     #[ORM\Column]
-    private ?int $price = null;
+    private ?int $nombre_salle = null;
+
+    #[ORM\ManyToOne(inversedBy: 'reservations')]
+    private ?User $user = null;
 
     #[ORM\Column(length: 255)]
-    private ?string $booking_date = null;
+    private ?string $coffee_shop_choisi = null;
 
-    #[ORM\Column]
-    private ?int $duration_time = null;
+    #[ORM\Column(type: Types::DATETIME_MUTABLE)]
+    private ?\DateTimeInterface $booking_date = null;
 
     public function getId(): ?int
     {
         return $this->id;
     }
 
-    public function getPrice(): ?int
+    public function getTypeSalle(): ?string
     {
-        return $this->price;
+        return $this->type_salle;
     }
 
-    public function setPrice(int $price): static
+    public function setTypeSalle(string $type_salle): static
     {
-        $this->price = $price;
+        $this->type_salle = $type_salle;
 
         return $this;
     }
 
-    public function getBookingDate(): ?string
+    public function getNombreSalle(): ?int
+    {
+        return $this->nombre_salle;
+    }
+
+    public function setNombreSalle(int $nombre_salle): static
+    {
+        $this->nombre_salle = $nombre_salle;
+
+        return $this;
+    }
+
+    public function getUser(): ?User
+    {
+        return $this->user;
+    }
+
+    public function setUser(?User $user): static
+    {
+        $this->user = $user;
+
+        return $this;
+    }
+
+    public function getCoffeeShopChoisi(): ?string
+    {
+        return $this->coffee_shop_choisi;
+    }
+
+    public function setCoffeeShopChoisi(string $coffee_shop_choisi): static
+    {
+        $this->coffee_shop_choisi = $coffee_shop_choisi;
+
+        return $this;
+    }
+
+    public function getBookingDate(): ?\DateTimeInterface
     {
         return $this->booking_date;
     }
 
-    public function setBookingDate(string $booking_date): static
+    public function setBookingDate(\DateTimeInterface $booking_date): static
     {
         $this->booking_date = $booking_date;
-
-        return $this;
-    }
-
-    public function getDurationTime(): ?int
-    {
-        return $this->duration_time;
-    }
-
-    public function setDurationTime(int $duration_time): static
-    {
-        $this->duration_time = $duration_time;
 
         return $this;
     }
