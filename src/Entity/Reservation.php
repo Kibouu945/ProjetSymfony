@@ -23,11 +23,14 @@ class Reservation
     #[ORM\ManyToOne(inversedBy: 'reservations')]
     private ?User $user = null;
 
-    #[ORM\Column(length: 255)]
+    #[ORM\Column(length: 255 , nullable: true)]
     private ?string $coffee_shop_choisi = null;
 
     #[ORM\Column(type: Types::DATETIME_MUTABLE)]
     private ?\DateTimeInterface $booking_date = null;
+
+    #[ORM\ManyToOne]
+    private ?Forfait $forfait = null;
 
     public function getId(): ?int
     {
@@ -90,6 +93,18 @@ class Reservation
     public function setBookingDate(\DateTimeInterface $booking_date): static
     {
         $this->booking_date = $booking_date;
+
+        return $this;
+    }
+
+    public function getForfait(): ?Forfait
+    {
+        return $this->forfait;
+    }
+
+    public function setForfait(?Forfait $forfait): static
+    {
+        $this->forfait = $forfait;
 
         return $this;
     }

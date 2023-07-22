@@ -4,6 +4,7 @@ namespace App\Controller\Admin;
 
 use App\Entity\CoffeeShop;
 use App\Entity\Forfait;
+use App\Entity\Reservation;
 use App\Entity\User;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
 use EasyCorp\Bundle\EasyAdminBundle\Config\MenuItem;
@@ -31,5 +32,7 @@ class DashboardController extends AbstractDashboardController
         yield MenuItem::linkToCrud('Forfaits', 'fas fa-box', Forfait::class);
         yield MenuItem::linkToCrud('Utilisateurs', 'fas fa-user', User::class);
         yield MenuItem::linkToCrud('Coffee Shop', 'fas fa-shop', CoffeeShop::class);
+        yield MenuItem::linkToCrud('Réservation', 'fas fa-euro', Reservation::class);
+        
     }
 }
