@@ -15,8 +15,14 @@ class ReservationController extends AbstractController
     
     public function processReservation(Request $request, EntityManagerInterface $entityManager): Response {
 
-        $userId = $request->request->get('firstname');
-        $userId = $request->request->get('lastname');
+
+        $user = $this->getUser();
+        
+        // Si l'utilisateur n'est pas connecté, rediriger vers la page de connexion
+        if (!$user) {
+            return $this->redirectToRoute('app_login');
+        }
+
         $bookingDate = new \DateTime($request->request->get('booking_date'));
 
         $typeSalle = $request->request->get('type_salle');
@@ -26,10 +32,6 @@ class ReservationController extends AbstractController
         $forfait = $request->request->get('nom');
      
         // Vérification du nombre de places réservées si le type de salle est "place"
-
-
-        
-
 
         if ($typeSalle === 'place') {
             // Vérifier si le nombre total de places réservées dépasse 120
@@ -47,10 +49,10 @@ class ReservationController extends AbstractController
 
         // Créer une nouvelle réservation
         $reservation = new Reservation();
-        $reservation->setTypeSalle($typeSalle)
-            ->setNombreSalle($nombreSalle)
-            ->setUser($userId) // Remplacez $user par l'objet User correspondant au client
+        $reservation ->setUser($user)
             ->setBookingDate($bookingDate)
+            ->setTypeSalle($typeSalle)
+            ->setNombreSalle($nombreSalle) 
             ->setForfait($forfait);
 
             // Enregistrer la réservation dans la base de données
