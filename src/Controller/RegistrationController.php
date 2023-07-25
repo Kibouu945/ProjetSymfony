@@ -41,7 +41,7 @@ class RegistrationController extends AbstractController
                     $form->get('plainPassword')->getData()
                 )
             );
-
+            
             //User token verification
 
             $user->setTokenRegistration($tokenRegistration);
