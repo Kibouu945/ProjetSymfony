@@ -48,14 +48,8 @@
                             <a href="{{ path ('index') }}" class="nav-item nav-link active">Accueil</a>
                             <a href="{{ path ('service') }}" class="nav-item nav-link">Nos Services</a>
                             <a href="{{ path ('about') }}" class="nav-item nav-link">A Propos</a>
+                            <a href="" class="nav-item nav-link">Salons Privés</a>
                             <a href="{{ path ('reservation') }}" class="nav-item nav-link">Réservation</a>
-                            <div class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Salons</a>
-                                <div class="dropdown-menu m-0">
-                                    <a href="" class="dropdown-item">Salons Privés</a>
-                                    <a href="" class="dropdown-item">Salon Principal </a>
-                                </div>
-                            </div>
                             <a href="{{ path ('contact') }}" class="nav-item nav-link">Contact</a>
                         </div>
                         <a href="{{ path ('app_register') }}" class="btn btn-primary rounded-pill py-2 px-4">Inscription</a>
@@ -82,12 +76,13 @@
                     <div class="container py-5">
                         <div class="row g-5">
                             <div class="col-lg-3 col-md-6">
-                                <h4 class="text-white mb-3">Company</h4>
-                                <a class="btn btn-link" href="">About Us</a>
-                                <a class="btn btn-link" href="">Contact Us</a>
-                                <a class="btn btn-link" href="">Privacy Policy</a>
-                                <a class="btn btn-link" href="">Terms & Condition</a>
-                                <a class="btn btn-link" href="">FAQs & Help</a>
+                                <h4 class="text-white mb-3">Menu</h4>
+                                <a href="{{ path ('index') }}" class="btn btn-link">Accueil</a>
+                                <a href="{{ path ('service') }}" class="btn btn-link">Nos Services</a>
+                                <a href="{{ path ('about') }}" class="btn btn-link">A Propos</a>
+                                <a href="" class="btn btn-link">Salons Privés</a>
+                                <a href="{{ path ('reservation') }}" class="btn btn-link">Réservation</a>
+                                <a href="{{ path ('contact') }}" class="btn btn-link">Contact</a>
                             </div>
                             <div class="col-lg-3 col-md-6">
                                 <h4 class="text-white mb-3">Contact</h4>
@@ -102,34 +97,13 @@
                                 </div>
                             </div>
                             <div class="col-lg-3 col-md-6">
-                                <h4 class="text-white mb-3">Gallery</h4>
-                                <div class="row g-2 pt-2">
-                                    <div class="col-4">
-                                        <img class="img-fluid bg-light p-1" src="img/package-1.jpg" alt="">
-                                    </div>
-                                    <div class="col-4">
-                                        <img class="img-fluid bg-light p-1" src="img/package-2.jpg" alt="">
-                                    </div>
-                                    <div class="col-4">
-                                        <img class="img-fluid bg-light p-1" src="img/package-3.jpg" alt="">
-                                    </div>
-                                    <div class="col-4">
-                                        <img class="img-fluid bg-light p-1" src="img/package-2.jpg" alt="">
-                                    </div>
-                                    <div class="col-4">
-                                        <img class="img-fluid bg-light p-1" src="img/package-3.jpg" alt="">
-                                    </div>
-                                    <div class="col-4">
-                                        <img class="img-fluid bg-light p-1" src="img/package-1.jpg" alt="">
-                                    </div>
-                                </div>
+                               
                             </div>
                             <div class="col-lg-3 col-md-6">
                                 <h4 class="text-white mb-3">Newsletter</h4>
-                                <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
                                 <div class="position-relative mx-auto" style="max-width: 400px;">
-                                    <input class="form-control border-primary w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
-                                    <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
+                                    <input class="form-control border-primary w-100 py-3 ps-4 pe-5" type="text" placeholder="Votre email">
+                                    <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">Sign Up</button>
                                 </div>
                             </div>
                         </div>
