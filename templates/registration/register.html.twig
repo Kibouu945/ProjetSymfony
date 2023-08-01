@@ -1,0 +1,51 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Inscription{% endblock %}
+
+{% block body %}
+
+        {{ form_errors(registrationForm) }}
+
+        {{ form_start(registrationForm) }}
+   
+    <div class="container">
+        <h1 class="mt-4">Inscription</h1>
+ 
+            <div class="mb-3">
+                <label for="registrationForm_Firstname" class="form-label">{{ form_label(registrationForm.Firstname, 'Prénom', {'label_attr': {'class': 'foo'}}) }}</label>
+                {{ form_widget(registrationForm.Firstname, {'attr': {'class': 'form-control'}}) }}
+            </div>
+
+            <div class="mb-3">
+                <label for="registrationForm_Lastname" class="form-label">{{ form_label(registrationForm.Lastname, 'Nom', {'label_attr': {'class': 'foo'}}) }}</label>
+                {{ form_widget(registrationForm.Lastname, {'attr': {'class': 'form-control'}}) }}
+            </div>
+
+            <div class="mb-3">
+                <label for="registrationForm_email" class="form-label">{{ form_label(registrationForm.email, 'Email', {'label_attr': {'class': 'foo'}}) }}</label>
+                {{ form_widget(registrationForm.email, {'attr': {'class': 'form-control'}}) }}
+            </div>
+
+            <div class="mb-3">
+                <label for="registrationForm_adress" class="form-label">{{ form_label(registrationForm.Adress, 'Adress', {'label_attr': {'class': 'foo'}}) }}</label>
+                {{ form_widget(registrationForm.Adress, {'attr': {'class': 'form-control'}}) }}
+            </div>
+
+            <div class="mb-3">
+                <label for="registrationForm_plainPassword" class="form-label">{{ form_label(registrationForm.plainPassword, 'Password', {'label_attr': {'class': 'foo'}}) }}</label>
+                {{ form_widget(registrationForm.plainPassword, {'attr': {'class': 'form-control'}}) }}
+            </div>
+            <div class="mb-3">
+                <label for="registrationForm_agreeTerms" class="">{{ form_label(registrationForm.agreeTerms, 'I Agree With The Condtions', {'label_attr': {'class': 'foo'}}) }}</label>
+                {{ form_widget(registrationForm.agreeTerms, {'attr': {'class': 'form-check'}}) }}
+            </div>
+
+            <div class="d-grid gap-2">
+                <button type="submit" class="btn btn-primary justify-content-center">S'inscrire</button>
+            </div>
+            
+    {{ form_end(registrationForm) }}
+    </div>
+
+
+{% endblock %}

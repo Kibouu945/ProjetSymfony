@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Confirmation de votre adresse email</title>
+</head>
+<body>
+<h1>Confirmation de votre adresse email</h1>
+
+<p>Bonjour {{ user.Firstname }},</p>
+
+<p>Merci de vous être inscrit sur notre site. Veuillez cliquer sur le lien ci-dessous pour confirmer votre adresse email, au plus tard le :<b> {{ lifeTimeToken }}</b>, apres cette date il ne sera plus valable . </p>
+
+<p><a href="{{absolute_url(path('account_verify', {token: token, id: user.id}))  }}">Confirmer mon adresse email</a></p>
+
+<p>Si vous n'avez pas effectué cette inscription, vous pouvez ignorer cet email.</p>
+
+<p>Cordialement,<br>
+    Notre équipe</p>
+</body>
+</html>
