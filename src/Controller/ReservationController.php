@@ -26,11 +26,23 @@ class ReservationController extends AbstractController
         $bookingDate = new \DateTime($request->request->get('booking_date'));
 
         $typeSalle = $request->request->get('type_salle');
-        $typeSalle = $typeSalle ?? 'none';
 
-        $nombreSalle = (int)$request->request->get('nombre_salle');
+        if (null === $typeSalle || '' === $typeSalle) {
+            $this->addFlash('error', 'Vous devez choisir un type de salle.');
+            return $this->redirectToRoute('reservation');
+        }
+
+        $forfait = $request->request->get('forfait');
+
+        // Si l'utilisateur n'a pas choisi de package, utilisez une valeur par défaut
+        if (null === $forfait || '' === $forfait) {
+            $forfait = 'none'; // ou une autre valeur par défaut de votre choix
+        }
+        
         $forfait = $request->request->get('nom');
      
+        $nombreSalle = (int)$request->request->get('nombre_salle');
+        
         // Vérification du nombre de places réservées si le type de salle est "place"
 
         if ($typeSalle === 'place') {
@@ -42,12 +54,13 @@ class ReservationController extends AbstractController
         } elseif ($typeSalle === 'salon') {
             // Vérifier si le nombre total de place reservé pour le salon privé est compris entre 4 et 6
             $totalSalonsReserves = $this->getTotalSalonsReserves($entityManager);
-            if ($totalSalonsReserves + 1 < 4 || $totalSalonsReserves + 1 > 6) {
+            if ($nombreSalle < 4 || $nombreSalle > 6) {
                 return new Response('Le nombre de place de ce type de salon doit être compris entre 4 et 6');
             }
         } 
 
         // Créer une nouvelle réservation
+        
         $reservation = new Reservation();
         $reservation ->setUser($user)
             ->setBookingDate($bookingDate)
