@@ -1,6 +1,6 @@
 /********** Template CSS **********/
 :root {
-    --primary: #6E594E;
+    --primary: 'black';
     --secondary: #FE8800;
     --light: #F5F5F5;
     --dark: #14141F;
@@ -40,12 +40,15 @@
 
 /*** Button ***/
 .btn {
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Lato', sans-serif;
     font-weight: 600;
     transition: .5s;
-    color: var(--primary); /* Nouvelle couleur pour les boutons */
+    color: var(--primary);
+ /* Nouvelle couleur pour les boutons */
 }
-
+.btn-booking {
+    background-color: #620d14;
+}
 .btn.btn-primary,
 .btn.btn-secondary {
     color: #FFFFFF;
@@ -145,7 +148,7 @@
     
     .sticky-top.navbar-light {
         position: fixed;
-        background: #FFFFFF;
+        background: #e4d1c7;
     }
 
     .navbar-light .navbar-nav .nav-link::before {
@@ -173,7 +176,7 @@
 
 /*** Hero Header ***/
 .hero-header {
-    background: linear-gradient(rgba(20, 20, 31, .7), rgba(20, 20, 31, .7)), url(../img/coffeeshop.jpg);
+    background: linear-gradient(rgba(66, 66, 68, 0.7), rgba(86, 86, 87, 0.7)), url(../img/coffeeshop.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -443,3 +446,6 @@
     border-right: none;
 }
 
+.footer {
+    background-color: #e4d1c7;
+}
