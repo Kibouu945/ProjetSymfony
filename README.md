@@ -40,4 +40,4 @@ Gusto Coffee est une application web conçue pour faciliter la réservation des 
     ```
     symfony server:start
     ```
-# gustCoffeeHeroku
+# gustCoffee
