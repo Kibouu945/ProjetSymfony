@@ -25,9 +25,10 @@ class HomeController extends AbstractController
     {
         return $this->render('home/about.html.twig');
     }
+    
     #[Route('/reservation', name: 'reservation')]
     public function reservation(): Response
-    {
+    {        
         return $this->render('home/reservation.html.twig');
     }
     
@@ -36,6 +37,13 @@ class HomeController extends AbstractController
     public function contact(): Response
     {
         return $this->render('home/contact.html.twig');
+    }
+
+
+    #[Route('/mentions-légales', name: 'mentleg')]
+    public function mentionleg(): Response
+    {
+        return $this->render('home/mentionslegales.html.twig');
     }
 
 
