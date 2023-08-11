@@ -3,6 +3,9 @@
 {% block title %}Ma Page Utilisateur{% endblock %}
 
 {% block body %}
+
+{% if is_granted('ROLE_USER') %}
+
  <div class="container mt-5">
 
         <h1 class="mt-4 mb-4">Bienvenue {{ user.firstname }} {{ user.lastname }}</h1>
@@ -12,7 +15,7 @@
                 <a href="" class="text-decoration-none">Gérer mes réservations</a>
             </li>
             <li class="list-group-item">
-                <a href="" class="text-decoration-none">Changer mon mot de passe</a>
+                <a href="{{ path('user.edit.password', {'id': user.id}) }}"  class="text-decoration-none">Changer mon mot de passe</a>
             </li>
                 <li class="list-group-item">
                 <a href="" class="text-decoration-none">Supprimer mon compte</a>
@@ -24,4 +27,10 @@
         </ul>
         
 </div>
+
+{% else %}
+<div class="container">
+    <p>Vous devez être connecté pour accéder à cette page.</p>
+    </div>
+{% endif %}
 {% endblock %}
