@@ -6,11 +6,12 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use App\Entity\Reservation;
+use Doctrine\ORM\EntityManagerInterface;
 
 class UserReservationController extends AbstractController
 {
     #[Route('/user/reservation', name: 'app_user_reservation')]
-    public function listReservations(): Response
+    public function listReservations( EntityManagerInterface $entityManager): Response
     {
        
         // Récupère l'utilisateur connecté
@@ -22,12 +23,13 @@ class UserReservationController extends AbstractController
         }
 
         // Récupère les réservations de l'utilisateur à partir de la base de données
-        $reservations = $this->getDoctrine()
-            ->getRepository(Reservation::class)
-            ->findBy(['user' => $user]);
+        $reservations = $entityManager->getRepository(Reservation::class)
+        ->findBy(['user' => $this->getUser()]);
+
 
         // Rendre la vue avec les réservations
-        return $this->render('reservation/user_reservations.html.twig', [
+        
+        return $this->render('user_reservation/index.html.twig', [
             'reservations' => $reservations,
         ]);
     
