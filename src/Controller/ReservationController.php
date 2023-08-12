@@ -23,6 +23,8 @@ class ReservationController extends AbstractController
             return $this->redirectToRoute('app_login');
         }
 
+        
+
         $bookingDate = new \DateTime($request->request->get('booking_date'));
 
         $typeSalle = $request->request->get('type_salle');
@@ -71,8 +73,7 @@ class ReservationController extends AbstractController
             // Enregistrer la réservation dans la base de données
             $entityManager->persist($reservation);
             $entityManager->flush();
-
-            return new Response('Réservation effectuée avec succès !');
+            return $this->render('reservation/booking_confirmation.html.twig');
 
     }
 
@@ -97,6 +98,7 @@ class ReservationController extends AbstractController
 
         return count($reservations);
     }
+
 }
 
 

@@ -6,7 +6,7 @@
         <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
 
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <meta content="" name="keywords">
+        <meta content="CoWorking Paris" name="keywords">
         <meta content="Gusto Coffee est une application web conçue pour faciliter la réservation des espaces de travail collaboratifs au sein du nouveau coffee-shop coworking de Gusto Coffee situé à Paris. En plus de la réservation, les utilisateurs peuvent choisir parmi différents forfaits de café et de douceurs sucrées." name="description" >
         <link href="{{asset('img/favicon.ico')}}" rel="icon">
 
@@ -64,15 +64,16 @@
                     </div>
                 </nav>
                 {# {% if app.request.attributes.get('_route') == 'home' %} #}
-                    <div class="container-fluid bg-primary py-5 mb-5 hero-header">
-                        <div class="container py-5">
-                            <div class="row justify-content-center py-5">
-                                <div class="col-lg-10 pt-lg-5 mt-lg-5 text-center">
-                                    <h1 class="display-3 text-white mb-3 animated slideInDown">Profitez de vos réunions dans le plus grand calme  </h1>                            
-                                </div>
+                <div class="container-fluid bg-primary py-5 mb-5 hero-header"> <!-- Réduit le padding vertical et la marge en bas -->
+                    <div class="container py-5"> <!-- Réduit le padding vertical de ce conteneur -->
+                        <div class="row justify-content-center">
+                            <div class="col-lg-10 text-center">
+                                <h1 class="display-3 text-white mb-3 animated slideInDown" style="font-size: 2.5rem;">Profitez de vos réunions dans le plus grand calme</h1> <!-- Réduit la taille de la police si nécessaire -->
                             </div>
                         </div>
                     </div>
+                </div>
+
                 {# {% endif%} #}
 
             </div>
