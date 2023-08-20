@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h2 class="mb-4 text-center">Mes réservations</h2>
+
+    <table class="table table-bordered table-striped">
+        <thead class="thead-dark text-center">
+        <tr>
+            <th>Date de réservation</th>
+            <th>Type de salle</th>
+            <th>Nombre de Personnes</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for reservation in reservations %}
+            <tr class="text-center">
+                <td>{{ reservation.bookingDate|date('Y-m-d') }}</td>
+                <td>{{ reservation.typeSalle }}</td>
+                <td>{{ reservation.NombreSalle }} personnes </td>
+
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="4" class="text-center text-muted">Vous n'avez aucune réservation pour le moment.</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
