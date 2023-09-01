@@ -1,0 +1,30 @@
+{# templates/mails/reservation_confirmation.html.twig #}
+
+{% extends 'mails/email_base.html.twig' %}
+
+{% block email_title %}
+    Confirmation de votre réservation chez Gusto Coffee
+{% endblock %}
+
+{% block email_body %}
+    Bonjour {{ user.firstname }} {{ user.lastname }},
+
+    Nous sommes heureux de vous confirmer votre réservation d'un espace de travail collaboratif chez Gusto Coffee pour le {{ reservation.bookingDate|date('d/m/Y') }} de {{ reservation.startTime|date('H:i') }} à {{ reservation.endTime|date('H:i') }}.
+
+    Voici les détails de votre réservation:
+    - Date : {{ reservation.bookingDate|date('d/m/Y') }}
+    - Heure de début : {{ reservation.startTime|date('H:i') }}
+    - Heure de fin : {{ reservation.endTime|date('H:i') }}
+    - Espace de travail : {{ reservation.typeSalle }}
+    - Nombre de personnes : {{ reservation.nombreSalle }}
+    - Prix : {{ reservation.totalAmount }}€
+
+    Nous vous rappelons que vous pouvez annuler votre réservation jusqu'à [heure limite d'annulation] le jour de votre réservation. Au-delà de cette heure, la réservation ne pourra pas être annulée et vous serez facturé du montant total de la réservation.
+
+    Pour toute question ou demande spécifique, n'hésitez pas à nous contacter à l'adresse cafe@cafe.fr.
+
+    Nous espérons que vous apprécierez votre temps chez Gusto Coffee.
+
+    Cordialement,
+    L'équipe Gusto Coffee
+{% endblock %}
