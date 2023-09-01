@@ -3,6 +3,7 @@
 namespace App\Services;
 use Symfony\Bridge\Twig\Mime\TemplatedEmail;
 use Symfony\Component\Mailer\MailerInterface;
+use Symfony\Component\Mailer\Exception\TransportExceptionInterface;
 
 class MailerService
 {
@@ -33,4 +34,30 @@ class MailerService
         }
 
     }
+    /*
+    // Envoyer un mail de bienvenue à l'inscription
+    public function sendWelcomeEmail(User $user): void
+    {
+        $this->send(
+            $user->getEmail(),
+            'Bienvenue sur notre site !',
+            'welcome.html.twig',
+            ['user' => $user]
+        );
+    }
+
+
+
+    // Envoyer un mail de confirmation de réservation
+    public function sendReservationConfirmation(Reservation $reservation): void
+    {
+        $this->send(
+            $reservation->getUser()->getEmail(),
+            'Confirmation de votre réservation',
+            'reservation_confirmation.html.twig',
+            ['reservation' => $reservation]
+        );
+    }
+
+     * */
 }

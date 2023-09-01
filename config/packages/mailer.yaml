@@ -1,4 +1,8 @@
 framework:
     mailer:
         dsn: '%env(MAILER_DSN)%'
+<<<<<<< HEAD
  #  sender_address: 'cafe@cafe.fr'
+=======
+      #  sender_address: 'cafe@cafe.fr'
+>>>>>>> aca5fe868aeac7c9c06d466b53b3a8e30a5430e6

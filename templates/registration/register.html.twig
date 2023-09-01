@@ -45,7 +45,21 @@
             </div>
             
     {{ form_end(registrationForm) }}
+    
+        <div class="d-flex justify-content-center mt-3">
+        {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+                <!-- Si l'utilisateur est déjà connecté, afficher un message ou le lien de déconnexion -->
+                <p>Vous êtes déjà connecté en tant que {{ app.user.username }}</p>
+                <a href="{{ path('app_logout') }}">Se déconnecter</a>
+            {% else %}
+                <!-- Si l'utilisateur n'est pas connecté, afficher le lien pour se connecter -->
+                <p>Déjà inscrit ?</p>
+                <a href="{{ path('app_login') }}">Se connecter</a>
+            {% endif %}
+        </div>
     </div>
 
 
 {% endblock %}
+
+

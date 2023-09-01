@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Modification du mot de passe de l'utilisateur
+{% endblock %}
+
+{% block body %}
+
+{% if is_granted('ROLE_USER') %}
+	    <div class="container">
+		<h1 class="mt-4">Formulaire de modification de mot de passse de l'utilisateur</h1>
+
+		{% for message in app.flashes('warning') %}
+			<div class="alert alert-warning mt-4">
+				{{ message }}
+			</div>
+		{% endfor %}
+
+		{{ form(form) }}
+		</div>
+
+        {% else %}
+        <div class="container">
+            <p>Vous devez être connecté pour accéder à cette page.</p>
+            </div>
+        {% endif %}
+
+	{% endblock %}

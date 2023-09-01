@@ -40,4 +40,11 @@ class HomeController extends AbstractController
     }
 
 
+    #[Route('/mentions-légales', name: 'mentleg')]
+    public function mentionleg(): Response
+    {
+        return $this->render('home/mentionslegales.html.twig');
+    }
+
+
 }
