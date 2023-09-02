@@ -29,12 +29,6 @@
             </div>
 
             <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
-
-                <div class="checkbox mb-3">
-                    <label>
-                         <a href="{{ path ('app_forgot_password_request') }}" class=""> Mot de Passe Oublié</a>
-                    </label>
-                </div>
             
            <div class="d-grid gap-2">
                 <button class="btn btn-lg btn-primary justify-content-center" type="submit">
