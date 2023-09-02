@@ -85,7 +85,7 @@
 
 /*** Navbar ***/
 .navbar-light .navbar-nav .nav-link {
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Lato', sans-serif;
     position: relative;
     margin-right: 25px;
     padding: 35px 0;
@@ -416,7 +416,7 @@
 .footer .btn.btn-link::before {
     position: relative;
     content: "\f105";
-    font-family: "Font Awesome 5 Free";
+    font-family: "Lato";
     font-weight: 900;
     margin-right: 10px;
 }
