@@ -27,16 +27,16 @@
             </div>
 
             <div class="mb-3">
-                <label for="registrationForm_adress" class="form-label">{{ form_label(registrationForm.Adress, 'Adress', {'label_attr': {'class': 'foo'}}) }}</label>
+                <label for="registrationForm_adress" class="form-label">{{ form_label(registrationForm.Adress, 'Adresse', {'label_attr': {'class': 'foo'}}) }}</label>
                 {{ form_widget(registrationForm.Adress, {'attr': {'class': 'form-control'}}) }}
             </div>
 
             <div class="mb-3">
-                <label for="registrationForm_plainPassword" class="form-label">{{ form_label(registrationForm.plainPassword, 'Password', {'label_attr': {'class': 'foo'}}) }}</label>
+                <label for="registrationForm_plainPassword" class="form-label">{{ form_label(registrationForm.plainPassword, 'Mot de passe', {'label_attr': {'class': 'foo'}}) }}</label>
                 {{ form_widget(registrationForm.plainPassword, {'attr': {'class': 'form-control'}}) }}
             </div>
             <div class="mb-3">
-                <label for="registrationForm_agreeTerms" class="">{{ form_label(registrationForm.agreeTerms, 'I Agree With The Condtions', {'label_attr': {'class': 'foo'}}) }}</label>
+                <label for="registrationForm_agreeTerms" class="">{{ form_label(registrationForm.agreeTerms, "J'accepte les conditions d'utilisation", {'label_attr': {'class': 'foo'}}) }}</label>
                 {{ form_widget(registrationForm.agreeTerms, {'attr': {'class': 'form-check'}}) }}
             </div>
 
