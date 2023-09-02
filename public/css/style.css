@@ -48,6 +48,8 @@
 }
 .btn-booking {
     background-color: #620d14;
+    color: var(--light);
+    border-radius: 10px;
 }
 .btn.btn-primary,
 .btn.btn-secondary {
