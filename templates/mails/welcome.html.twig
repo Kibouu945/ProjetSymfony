@@ -1,0 +1,28 @@
+{# templates/mails/welcome.html.twig #}
+
+{% extends 'mails/email_base.html.twig' %}
+
+{% block email_title %}
+    Bienvenue chez Gusto Coffee!
+{% endblock %}
+
+{% block email_body %}
+
+    Bonjour {{ user.firstname }} {{ user.lastname }},
+
+    Nous sommes ravis de vous compter parmi notre communauté Gusto Coffee !
+
+    Que ce soit pour savourer un café de qualité, travailler dans un espace agréable ou simplement rencontrer d'autres passionnés, nous sommes convaincus que vous allez adorer votre expérience chez nous.
+
+    Voici quelques informations pour bien démarrer :
+    - Découvrez nos [menus et offres spéciales](#URL_DU_MENU) pour vous régaler à chaque visite.
+    - Réservez votre espace de travail [ici](#URL_DE_RESERVATION) pour garantir une place lors de vos sessions de travail.
+    - Participez à nos [événements et ateliers](#URL_EVENEMENTS) pour enrichir vos compétences et élargir votre réseau.
+
+    Si vous avez des questions ou des suggestions, n'hésitez pas à nous contacter à cafe@cafe.fr. Nous sommes toujours à l'écoute de nos clients pour améliorer nos services.
+
+    Merci de nous avoir choisis, et nous espérons vous voir très bientôt chez Gusto Coffee !
+
+    À bientôt,
+    L'équipe Gusto Coffee
+{% endblock %}
