@@ -79,39 +79,34 @@
                 </div>
             </div>
             <!-- Navbar & Hero End -->
+            {% block body %}
+            
+            {% endblock %}
 
-		{% block body %}{% endblock %}
-
-		<!-- Footer Start -->
-		<div class="container-fluid text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
-			<div class="container py-5">
-				<div class="row g-5">
-					<div class="col-lg-3 col-md-6">
-						<h4 class="text-dark mb-3">Menu</h4>
-						<a href="{{ path ('index') }}" class="btn text-dark btn-link">Accueil</a>
-						<a href="{{ path ('service') }}" class="btn text-dark btn-link">Nos Services</a>
-						<a href="{{ path ('about') }}" class="btn text-dark btn-link">A Propos</a>
-						<a href="{{ path ('reservation') }}" class="btn text-dark btn-link">Réservation</a>
-						<a href="{{ path ('contact') }}" class="btn text-dark btn-link">Contact</a>
-					</div>
-					<div class="col-lg-3 col-md-6">
-						<h4 class="text-dark mb-3">Contact</h4>
-						<p class="mb-2 text-dark">
-							<i class="fa fa-map-marker-alt me-3"></i>10 rue des lilas, Créteil, 94000</p>
-						<p class="mb-2 text-dark">
-							<i class="fa fa-phone-alt me-3"></i>+33.1.56.37.84.85</p>
-						<p class="mb-2 text-dark">
-							<i class="fa fa-envelope me-3"></i>gustocoffee@f2i-dev22-rt-gm-mg-ag.fr</p>
-						<div class="d-flex pt-2">
-							<a class="btn btn-booking btn-social me-3" href="https://m.facebook.com/p/Coffee-Gusto-61551042325030/?wtsid=rdr_03ZvjVu2NYFoC9N7D&_rdr">
-								<i class="fab fa-facebook-f"></i>
-							</a>
-							<a class="btn btn-booking btn-social" href="https://www.linkedin.com/in/gusto-coffee-53695628b">
-								<i class="fab fa-linkedin-in"></i>
-							</a>
-						</div>
-					</div>
-					<div class="col-lg-3 col-md-6">
+            
+                <!-- Footer Start -->
+                <div class="container-fluid text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+                    <div class="container py-5">
+                        <div class="row g-5">
+                            <div class="col-lg-3 col-md-6">
+                                <h4 class="text-dark mb-3">Menu</h4>
+                                <a href="{{ path ('index') }}" class="btn text-dark btn-link">Accueil</a>
+                                <a href="{{ path ('service') }}" class="btn text-dark btn-link">Nos Services</a>
+                                <a href="{{ path ('about') }}" class="btn text-dark btn-link">A Propos</a>
+                                <a href="{{ path ('reservation') }}" class="btn text-dark btn-link">Réservation</a>
+                                <a href="{{ path ('contact') }}" class="btn text-dark btn-link">Contact</a>
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                                <h4 class="text-dark mb-3">Contact</h4>
+                                <p class="mb-2 text-dark"><i class="fa fa-map-marker-alt me-3"></i>10 rue des lilas, Créteil, 94000</p>
+                                <p class="mb-2 text-dark"><i class="fa fa-phone-alt me-3"></i>+33.1.56.37.84.85</p>
+                                <p class="mb-2 text-dark"><i class="fa fa-envelope me-3"></i>gustocoffee@f2i-dev22-rt-gm-mg-ag.fr</p>
+                                <div class="d-flex pt-2">
+                                    <a class="btn btn-booking btn-social me-3" href="https://m.facebook.com/p/Coffee-Gusto-61551042325030/?wtsid=rdr_03ZvjVu2NYFoC9N7D&_rdr"><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-booking btn-social" href="https://www.linkedin.com/in/gusto-coffee-53695628b"><i class="fab fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6">
 
 						<div class="col-lg-3 col-md-6">
 							<h4 class="text-dark mb-3">Termes & Conditions</h4>
