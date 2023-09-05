@@ -1,0 +1,11 @@
+User-agent: *
+Disallow: /page-utilisateur/  # Empêche l'indexation page d'utilisateur
+Disallow: /user/reservation/  # Empêche l'indexation page d'utilisateur de réservation
+Disallow: /utilisateur/       # Empêche l'indexation des pages utilisateur
+Disallow: /admin/    # Empêche l'indexation des pages d'administration
+Disallow: /search/   # Empêche l'indexation des résultats de recherche
+Disallow: /inscription/    # Empêche l'indexation des pages d'inscription
+Disallow: /connexion/ # Empêche l'indexation des pages de connexion
+Disallow: /logout/ # Empêche l'indexation des pages de deconnexion
+Disallow: /page-utilisateur/  # Empêche l'indexation des pages de profil utilisateur
+Allow: /             # Permet l'indexation de toutes les autres pages
