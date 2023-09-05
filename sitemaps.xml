@@ -16,11 +16,6 @@
       <priority>0.7</priority>
    </url>
    <url>
-      <loc>https://f2i-dev22-rt-gm-mg-ag.fr/services</loc>
-      <changefreq>weekly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
       <loc>https://f2i-dev22-rt-gm-mg-ag.fr/reservation</loc>
       <changefreq>monthly</changefreq>
       <priority>0.7</priority>
