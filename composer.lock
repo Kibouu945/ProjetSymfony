@@ -438,7 +438,6 @@
         {
             "name": "doctrine/doctrine-bundle",
             "version": "2.10.0",
->>>>>>> addde7a (reset password)
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/DoctrineBundle.git",
@@ -446,10 +445,6 @@
             },
             "dist": {
                 "type": "zip",
-<<<<<<< HEAD
-                "url": "https://api.github.com/repos/doctrine/DoctrineBundle/zipball/f28b1f78de3a2938ff05cfe751233097624cc756",
-                "reference": "f28b1f78de3a2938ff05cfe751233097624cc756",
-=======
                 "url": "https://api.github.com/repos/doctrine/DoctrineBundle/zipball/b2ec6c2668f6dc514e8bf51257d19c7c19398afe",
                 "reference": "b2ec6c2668f6dc514e8bf51257d19c7c19398afe",
                 "shasum": ""
@@ -1076,7 +1071,6 @@
         {
             "name": "doctrine/orm",
             "version": "2.15.2",
->>>>>>> addde7a (reset password)
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/orm.git",
@@ -1084,10 +1078,6 @@
             },
             "dist": {
                 "type": "zip",
-<<<<<<< HEAD
-                "url": "https://api.github.com/repos/doctrine/orm/zipball/597a63a86ca8c5f9d1ec2dc74fe3d1269d43434a",
-                "reference": "597a63a86ca8c5f9d1ec2dc74fe3d1269d43434a",
-=======
                 "url": "https://api.github.com/repos/doctrine/orm/zipball/bf449bef7ddc47e62c22f9a06dacc1736abe1c0b",
                 "reference": "bf449bef7ddc47e62c22f9a06dacc1736abe1c0b",
                 "shasum": ""
@@ -1668,7 +1658,6 @@
         {
             "name": "phpstan/phpdoc-parser",
             "version": "1.22.0",
->>>>>>> addde7a (reset password)
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpdoc-parser.git",
@@ -1676,10 +1665,6 @@
             },
             "dist": {
                 "type": "zip",
-<<<<<<< HEAD
-                "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/846ae76eef31c6d7790fac9bc399ecee45160b26",
-                "reference": "846ae76eef31c6d7790fac9bc399ecee45160b26",
-=======
                 "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/ec58baf7b3c7f1c81b3b00617c953249fb8cf30c",
                 "reference": "ec58baf7b3c7f1c81b3b00617c953249fb8cf30c",
                 "shasum": ""
@@ -7190,9 +7175,6 @@
         },
         {
             "name": "symfonycasts/reset-password-bundle",
-<<<<<<< HEAD
-            "version": "v1.14.1",
-=======
             "version": "v1.17.0",
             "source": {
                 "type": "git",
@@ -7294,7 +7276,6 @@
         {
             "name": "twig/extra-bundle",
             "version": "v3.6.0",
->>>>>>> addde7a (reset password)
             "source": {
                 "type": "git",
                 "url": "https://github.com/SymfonyCasts/reset-password-bundle.git",
