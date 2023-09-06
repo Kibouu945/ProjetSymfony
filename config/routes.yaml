@@ -4,6 +4,7 @@ controllers:
         namespace: App\Controller
     type: attribute
 
-#accept_cookies:
- #   path: /
-  #  controller: App\Controller\HomeController::acceptCookies
+accept_cookies:
+   path: /accept-cookies
+   controller: App\Controller\CookieController::acceptCookies
+   methods: POST
