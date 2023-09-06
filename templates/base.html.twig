@@ -35,9 +35,10 @@
 		<!-- Stylesheet -->
 		<link href="{{asset('css/style.css')}}" rel="stylesheet">
 
-	</head>
-	<body>
-            <!-- Navbar & Hero Start -->
+    </head>
+    <body>
+    {% include 'cookiebanner.html.twig' %}
+      <!-- Navbar -->
             <div class="container-fluid position-relative p-0">
                 <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
                     <a href="{{ path ('index') }}" class="navbar-brand p-0">
@@ -122,6 +123,7 @@
 		</div>
 		<!-- Footer End -->
 
+<<<<<<< HEAD
 		{% block js %}
 			<!-- JavaScript Scrîpts -->
 			<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -145,4 +147,30 @@
 
 		{% endblock %}
 	</body>
+=======
+                <!-- Affichage Bannière Cookie -->
+                <script>
+
+                    document.getElementById('accept-cookies').addEventListener('click', function() {
+                    fetch('/accept-cookies', {
+                        method: 'POST', 
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({ accept: true })
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.accepted) {
+                            document.getElementById('cookie-banner').style.display = 'none';
+                        }
+                    });
+                });
+
+
+                </script>
+                
+            {% endblock %}   
+    </body>
+>>>>>>> 87683b56bef68d6a68f764dbefcdbcea5c54d797
 </html>
