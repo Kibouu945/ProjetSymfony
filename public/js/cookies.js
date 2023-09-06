@@ -1,3 +1,4 @@
+"use strict";
 
 document.getElementById('accept-cookies').addEventListener('click', function() {
     fetch('/accept-cookies', {

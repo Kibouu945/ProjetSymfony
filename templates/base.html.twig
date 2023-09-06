@@ -137,18 +137,11 @@
 			<!-- Template Javascript -->
 			<script src="{{asset('js/main.js')}}"></script>
 
-                <!-- Affichage Bannière Cookie -->
-                <script async src="{{asset('js/cookies.js')}}"></script>
+            <!-- Affichage Bannière Cookie -->
+            <script async src="{{asset('js/cookies.js')}}"></script>
                 
             <!-- Google analytics -->
-            <script async src="https://www.googletagmanager.com/gtag/js?id=G-CVC56DGEZL"></script>
-                <script>
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
-
-                gtag('config', 'G-CVC56DGEZL');
-            </script>
+           <script async src="{{asset('js/googleAnalytics.js')}}"></script>
 
 		{% endblock %}
 	</body>
