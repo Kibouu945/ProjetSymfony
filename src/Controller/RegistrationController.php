@@ -48,6 +48,20 @@ class RegistrationController extends AbstractController
             $entityManager->persist($user);
             $entityManager->flush();
 
+            // Send email
+            $mailerService->send(
+                $user->getEmail(),
+                'Activation de votre compte',
+                'registration_confirmation.html.twig',
+                [
+                    'token' => $tokenRegistration,
+                    'user' => $user,
+                    'lifeTimeToken' => $user->getTokenRegistrationLifetime()->format('d-m-Y H:i:s')
+
+                ]
+            );
+
+            $this->addFlash('success', 'Votre compte a bien été créé, verifier votre compte email pour l\'activer !');
          
             return $this->redirectToRoute('app_login');
         }
@@ -55,6 +69,30 @@ class RegistrationController extends AbstractController
         return $this->render('registration/register.html.twig', [
             'registrationForm' => $form->createView(),
         ]);
+    }
+
+    #[Route('/verify/{token}/{id<\d+>}', name: 'account_verify',methods: ['GET'])]
+    public function verify(string $token,User $user,EntityManagerInterface $em): Response
+    {
+        if($user->getTokenRegistration()!==$token){
+           throw new AccessDeniedException('Le token n\'est pas valide');
+        }
+
+        if($user->getTokenRegistration() === null){
+            throw new AccessDeniedException('Le token n\'est pas valide');
+        }
+
+        if(new DateTime('now') > $user->getTokenRegistrationLifetime()){
+            throw new AccessDeniedException('Le token n\'est plus valide');
+        }
+
+        $user->setIsVerified(true);
+        $user->setTokenRegistration(null);
+        $em->flush();
+
+        $this->addFlash('success','Votre compte a bien été activé !');
+
+        return $this->redirectToRoute('app_login');
     }
 
 }
